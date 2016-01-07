@@ -6,16 +6,16 @@ import java.util.ArrayList;
  * Created by Max on 06.01.2016.
  */
 public class Odd_even {
-    public static void odd_even(int[] arr, int n){
+    public static void odd_even(int[] arr){
         ArrayList <Integer> odd = new ArrayList();
         ArrayList <Integer> even = new ArrayList();
         int quant_nul=0;
-        for(int i=0; i<n;i++){
-            if( arr[i] % 2 == 0){
-                odd.add(arr[i]);
-            }
-            else if(arr[i]==0){
+        for(int i=0; i<arr.length;i++){
+            if(arr[i]==0){
                 quant_nul+=1;
+            }
+            else if( arr[i] % 2 == 0){
+                odd.add(arr[i]);
             }
             else{
                 even.add(arr[i]);
